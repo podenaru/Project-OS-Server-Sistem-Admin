@@ -8,7 +8,6 @@ disini saya akan membuat web server dengan 5 layanan server menggunakan Linux kh
 
 ## Langkah 1: Persiapan Awal
   1. Update Server
-     Jalankan perintah berikut untuk memastikan semua paket terbaru:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
