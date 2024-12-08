@@ -61,7 +61,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-### Database Server (MariaDB/MySQL)
+### 2. Database Server (MariaDB/MySQL)
 - Instal MariaDB:
 ```bash
 sudo apt install mariadb-server -y
@@ -80,7 +80,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-### Redis Server
+### 3. Redis Server
 - Instal Redis:
 ```bash
 sudo apt install redis -y
@@ -90,4 +90,58 @@ sudo systemctl enable redis
 - Verifikasi Redis berjalan:
 ```bash
 redis-cli ping
+```
+
+### 4. FTP/SFTP Server (ProFTPD)
+- Instal ProFTPD:
+```bash
+sudo apt install proftpd -y
+sudo systemctl start proftpd
+sudo systemctl enable proftpd
+```
+- Tambahkan pengguna FTP untuk server FiveM:
+```bash
+sudo adduser fivemftp
+sudo usermod -aG www-data fivemftp
+```
+
+### 5. FiveM Game Server
+- Buat direktori server:
+```bash
+mkdir -p ~/fivem/server
+cd ~/fivem/server
+```
+- Unduh dan ekstrak FiveM:
+```bash
+wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/latest.tar.xz
+tar -xvf latest.tar.xz
+```
+- Unduh cfx-server-data:
+```bash
+cd ~
+git clone https://github.com/citizenfx/cfx-server-data.git fivem-data
+```
+- Buat file server.cfg:
+```bash
+nano ~/fivem-data/server.cfg
+```
+- Contoh isi:
+```bash
+sv_hostname "Nama Server Anda"
+sv_maxclients 32
+sv_licenseKey "KEY_LISENSI_ANDA"
+
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+ensure mapmanager
+ensure chat
+ensure spawnmanager
+ensure sessionmanager
+ensure scoreboard
+```
+- Jalankan server FiveM:
+```bash
+cd ~/fivem/server
+screen -S fivem ./run.sh +exec ~/fivem-data/server.cfg
 ```
