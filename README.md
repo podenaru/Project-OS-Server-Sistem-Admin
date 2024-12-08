@@ -17,7 +17,7 @@ sudo apt install nginx mariadb-server redis screen wget curl git unzip -y
 ```
 
 ## Langkah 2: Instal dan Konfigurasi 5 Layanan
-1. Web Server dengan Nginx (Panel Manajemen)
+### 1. Web Server dengan Nginx (Panel Manajemen)
 - Instal Nginx dan pastikan berjalan:
 ```bash
 sudo apt install nginx -y
