@@ -60,3 +60,34 @@ sudo ln -s /etc/nginx/sites-available/fivem /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
+
+### Database Server (MariaDB/MySQL)
+- Instal MariaDB:
+```bash
+sudo apt install mariadb-server -y
+```
+- Amankan instalasi:
+```bash
+sudo mysql_secure_installation
+```
+- Buat database untuk server FiveM:
+```bash
+sudo mysql -u root -p
+CREATE DATABASE fivem_db;
+CREATE USER 'fivem_user'@'localhost' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON fivem_db.* TO 'fivem_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+### Redis Server
+- Instal Redis:
+```bash
+sudo apt install redis -y
+sudo systemctl start redis
+sudo systemctl enable redis
+```
+- Verifikasi Redis berjalan:
+```bash
+redis-cli ping
+```
