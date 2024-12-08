@@ -5,3 +5,5 @@ disini saya akan membuat web server dengan 5 layanan server menggunakan Linux kh
   3. Redis Server: Untuk cache dan performa.
   4. File Transfer Server (FTP/SFTP): Mengelola file server FiveM.
   5. FiveM Game Server: Layanan utama yang menjalankan GTA FiveM.
+
+## Langkah 1: Persiapan Awal
