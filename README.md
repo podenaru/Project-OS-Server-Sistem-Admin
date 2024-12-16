@@ -156,3 +156,6 @@ sudo ufw allow 6379  # Redis
 sudo ufw allow 21    # FTP
 sudo ufw enable
 ```
+
+## Langkah 4: Daftar Server Key
+- bikin key server dengan daftar di website https://keymaster.fivem.net/
