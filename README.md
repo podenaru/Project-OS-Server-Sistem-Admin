@@ -87,7 +87,7 @@ tar -xvf latest.tar.xz
 ```bash
 mkdir -p ~/fivem/server-data
 cd ~/fivem/server-data
-git clone https://github.com/citizenfx/cfx-server-data.git fivem-data
+git clone https://github.com/citizenfx/cfx-server-data.git
 ```
 - Buat file server.cfg:
 ```bash
