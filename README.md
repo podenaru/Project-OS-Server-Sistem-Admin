@@ -6,6 +6,13 @@ disini saya akan membuat web server dengan 5 layanan server menggunakan Linux kh
 4. File Transfer Server (FTP/SFTP): Mengelola file server FiveM.
 5. FiveM Game Server: Layanan utama yang menjalankan GTA FiveM.
 6. SSH ( Secure Shell) :mengakses dan mengelola server secara aman dari jarak jauh
+
+## Spesifikasi
+1. Ubuntu Server 22.04.5 LTS (Jammy Jellyfish)
+2. RAM 5GB
+3. Processor 4 Core
+4. Storage 25GB
+    
 ## Langkah 1: Persiapan Awal
 1. Update Server
 ```bash
