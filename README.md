@@ -117,7 +117,7 @@ screen -S fivem ./run.sh +exec ~/fivem-data/server.cfg
 ## Langkah 3: Konfigurasi Firewall
 - Buka port yang diperlukan:
 ```bash
-sudo ufw allow 80    # Nginx
+sudo ufw allow 80    # Apache2
 sudo ufw allow 30120 # FiveM
 sudo ufw allow 3306  # MariaDB
 sudo ufw allow 6379  # Redis
