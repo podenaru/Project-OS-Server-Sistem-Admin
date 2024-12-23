@@ -20,51 +20,14 @@ disini saya akan membuat web server dengan 5 layanan server menggunakan Linux kh
 sudo apt update && sudo apt upgrade -y
 ```
 
-## Langkah 2: Instal dan Konfigurasi 5 Layanan
+## Langkah 2: Instal dan Konfigurasi Server Layanan
 ### 1. Web Server dengan Nginx (Panel Manajemen)
-- Instal Nginx dan pastikan berjalan:
+- Instal Apache2 dan pastikan berjalan:
 ```bash
-sudo apt install nginx -y
-sudo systemctl start nginx
-sudo systemctl enable nginx
+sudo apt install apache2
+sudo systemctl start apache2
+sudo systemctl enable apache2
 ```
-- Buat folder web root untuk panel:
-```bash
-sudo mkdir -p /var/www/fivem-panel
-sudo chown -R $USER:$USER /var/www/fivem-panel
-```
-- Edit konfigurasi Nginx:
-```bash
-sudo nano /etc/nginx/sites-available/fivem
-```
-- Tambahkan:
-```bash
-server {
-    listen 80;
-    server_name yourdomain.com;
-
-    root /var/www/fivem-panel;
-    index index.html index.php;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.4-fpm.sock;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        include fastcgi_params;
-    }
-}
-```
-- Aktifkan konfigurasi:
-```bash
-sudo ln -s /etc/nginx/sites-available/fivem /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
 ### 2. Database Server (MariaDB/MySQL)
 - Instal MariaDB:
 ```bash
