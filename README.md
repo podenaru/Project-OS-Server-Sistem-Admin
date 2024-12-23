@@ -80,12 +80,13 @@ cd ~/fivem/server
 ```
 - Unduh dan ekstrak FiveM:
 ```bash
-wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/latest.tar.xz
+wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/12092-c9700385dfad9008c8b7888a61d3901451c4dc29/fx.tar.xz
 tar -xvf latest.tar.xz
 ```
 - Unduh cfx-server-data:
 ```bash
-cd ~
+mkdir -p ~/fivem/server-data
+cd ~/fivem/server-data
 git clone https://github.com/citizenfx/cfx-server-data.git fivem-data
 ```
 - Buat file server.cfg:
