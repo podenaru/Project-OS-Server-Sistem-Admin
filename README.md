@@ -1,11 +1,12 @@
 # Project-OS-Server-Sistem-Admin
 disini saya akan membuat web server dengan 5 layanan server menggunakan Linux khusus untuk keperluan GTA FiveM, kita dapat mengatur layanan yang meliputi:
 1. Web Panel: Untuk mengelola server FiveM melalui antarmuka web.
-2. Database Server: Menyimpan data pemain atau skrip (menggunakan MariaDB/MySQL).
-3. Redis Server: Untuk cache dan performa.
-4. File Transfer Server (FTP/SFTP): Mengelola file server FiveM.
-5. FiveM Game Server: Layanan utama yang menjalankan GTA FiveM.
-6. SSH ( Secure Shell) :mengakses dan mengelola server secara aman dari jarak jauh
+2. Apache2: Web server untuk mendukung layanan dan aplikasi berbasis web.
+3. Database Server: Menyimpan data pemain atau skrip (menggunakan MariaDB/MySQL).
+4. Redis Server: Untuk cache dan performa.
+5. File Transfer Server (FTP/SFTP): Mengelola file server FiveM.
+6. FiveM Game Server: Layanan utama yang menjalankan GTA FiveM.
+7. SSH ( Secure Shell) :mengakses dan mengelola server secara aman dari jarak jauh
 
 ## Spesifikasi
 1. Ubuntu Server 22.04.5 LTS (Jammy Jellyfish)
