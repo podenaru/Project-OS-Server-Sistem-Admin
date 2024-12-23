@@ -5,15 +5,11 @@ disini saya akan membuat web server dengan 5 layanan server menggunakan Linux kh
 3. Redis Server: Untuk cache dan performa.
 4. File Transfer Server (FTP/SFTP): Mengelola file server FiveM.
 5. FiveM Game Server: Layanan utama yang menjalankan GTA FiveM.
-
+6. SSH ( Secure Shell) :mengakses dan mengelola server secara aman dari jarak jauh
 ## Langkah 1: Persiapan Awal
 1. Update Server
 ```bash
 sudo apt update && sudo apt upgrade -y
-```
-2. Instal Paket Dasar
-```bash
-sudo apt install nginx mariadb-server redis screen wget curl git unzip -y
 ```
 
 ## Langkah 2: Instal dan Konfigurasi 5 Layanan
